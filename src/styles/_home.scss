@@ -1,6 +1,6 @@
 body {
-    // background: url('/img/bg.jpeg') no-repeat center center fixed;
-    // background-size: cover;
+    background: url('https://images.unsplash.com/photo-1462663608395-404cb6246eaf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=47d882ec1d9e97c67aeafe03e8780dc0') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .center {
@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .infobox {
@@ -34,6 +35,21 @@ body {
                 color: #000000;
             }
         }
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 20px 0 0 0;
+      border: 0;
+      background-color: #455a64;
+      color: #FFFFFF;
+      cursor: pointer;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.3);
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: #37474f;
+      }
     }
 }
 
