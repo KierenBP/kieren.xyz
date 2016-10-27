@@ -1,6 +1,6 @@
 body {
-    // background:;
-    // background-color: black;
+    // background: url('/img/bg.jpeg') no-repeat center center fixed;
+    // background-size: cover;
 }
 
 .center {
@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-.homebox {
+.infobox {
     padding: 20px 50px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
