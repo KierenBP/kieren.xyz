@@ -19,7 +19,9 @@ gulp.task('default', () => {
 // Compile and compressed sass
 gulp.task('sass', () => {
   return gulp.src('./src/styles/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./dist/css'));
 });
 
@@ -31,8 +33,8 @@ gulp.task('html', () => {
 });
 
 // Image Minfier
-gulp.task('images', () =>
-    gulp.src('./src/images/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
-);
+gulp.task('images', () => {
+  return gulp.src('./src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'));
+});
