@@ -1,6 +1,7 @@
 # Personal Website
-
-#### Development environment
-`npm install`
-
-`gulp`
+---
+### Development environment
+#### NPM
+`npm install && gulp`
+#### Yarn
+`yarn && gulp`
