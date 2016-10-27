@@ -12,6 +12,7 @@ body {
 }
 
 .infobox {
+    animation: fadein 0.5s;
     padding: 50px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -21,7 +22,11 @@ body {
     .logo {
         width: 100px;
         margin-bottom: 10px;
-        box-shadow: 0 4px 4px rgba(0,0,0,.3);
+        transition: 0.5s box-shadow;
+
+        &:hover {
+            box-shadow: 0 4px 4px rgba(0,0,0,.3);
+        }
     }
 
     h1 {
@@ -77,5 +82,26 @@ body {
         &:hover {
             background-color: #37474f;
         }
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.50;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
