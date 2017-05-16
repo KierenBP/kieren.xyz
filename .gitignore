@@ -1,6 +1,6 @@
 
 # Created by https://www.gitignore.io/api/node
-
+.DS_Store
 ### Node ###
 # Logs
 logs
@@ -46,3 +46,6 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
+# Ignore Config so you dont upload secret keys
+config.json

@@ -1,0 +1,12 @@
+// Example config. RUNS EXAMPLE CONFIG (THIS FILE) IN DEVELOPMENT MODE.
+// SET NODE_ENV TO PRODUCTION TO USE './config.json'
+// DO NOT SET PRODUCTION VARIABLES IN THIS CONFIG. IT WILL BE OVERWRITTEN.
+{
+    "mysqlConnection": {
+        "host": "",
+        "port": 0,
+        "username": "",
+        "password": "",
+        "database": ""
+    }
+}
