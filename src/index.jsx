@@ -11,7 +11,6 @@ export default class App extends React.Component {
    return(
     <Router>
         <div>
-          <NavBar />
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route exact path="/projects" component={Projects}/>
@@ -43,6 +42,26 @@ class NavBar extends React.Component {
 }
 
 
+class SideNav extends React.Component {
+  render() {
+    return (
+      <div className="sidenav">
+          <div className="profile">
+            <img src="http://www.sheffield.com/wp-content/uploads/2013/06/placeholder.png" />
+            <h1>Kieren BP</h1>
+          </div>
+          <div className="social-links">
+            <a href="https://www.linkedin.com/in/kierenbp/" target="_blank"><i className="fa fa-linkedin-square fa-2x" /></a>
+            <a href="https://github.com/kierenbp" target="_blank"><i className="fa fa-github fa-2x" /></a>
+            <a href="http://codepen.io/imkieren" target="_blank"><i className="fa fa-codepen fa-2x" /></a>
+            <a href="emailto:kieren@kieren.xyz" target="_blank"><i className="fa fa-envelope fa-2x" /></a>
+          </div>
+      </div>
+    )
+  }
+}
+
+
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
@@ -55,22 +74,28 @@ class Homepage extends React.Component {
     }
   render() {
     return (
-      <div className="homepage-bio">
-        <div className="me-irl">
-          <div className="profile-picture">
-          <img src="http://www.sheffield.com/wp-content/uploads/2013/06/placeholder.png" />
-          </div>
-          <div className="social-links">
-            <a href="https://www.linkedin.com/in/kierenbp/" target="_blank"><i className="fa fa-linkedin-square fa-2x" /></a>
-            <a href="https://github.com/kierenbp" target="_blank"><i className="fa fa-github fa-2x" /></a>
-            <a href="http://codepen.io/imkieren" target="_blank"><i className="fa fa-codepen fa-2x" /></a>
-            {/*<a href="https://github.com/kierenbp" target="_blank"><i className="fa fa-medium fa-2x" /></a>*/}
-            <a href="emailto:kieren@kieren.xyz" target="_blank"><i className="fa fa-envelope fa-2x" /></a>
-          </div>
+      <div className="homepage">
+        <SideNav />
+        <div className="bio">
+          <p className="bio-text">
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+            <h1>Introduction</h1>
+            {this.state.bio + ' ' + this.state.bio}
+          </p>
         </div>
-        <p className="bio">
-          {this.state.bio + ' ' + this.state.bio}
-        </p>
       </div>
     )
   }

@@ -1,9 +1,14 @@
 @import '_variables';
 @import 'partial/_background';
 
+// Global App CSS
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+// Page CSS
+@import 'page/_homepage';
+
 

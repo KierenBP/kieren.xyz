@@ -1,0 +1,51 @@
+.sidenav {
+    background-color: $background-color;
+    text-align: center;
+    color: $primary-color;
+    .profile {
+        img {
+            border-radius: 100%;
+            border: 5px solid $primary-color;
+            width: 200px;
+        }
+    }
+    .social-links {
+        padding-bottom: 20px;
+        a {
+            color: $primary-color;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.homepage {
+    background-color: #FAFAFA;
+}
+
+@media (min-width: 960px) {
+    .homepage {
+        display: flex;
+    }
+    .bio {
+        width: 70%;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 0 50px 0 50px;
+        .bio-text {
+            h1 {
+                color: $primary-color;
+            }
+        }
+    }
+    .sidenav {
+        height: 100vh;
+        order: 2;
+        width: 30%;
+        .profile {
+            margin-top: 150px;
+        }
+
+    }
+}
