@@ -15,9 +15,9 @@
         <script>
             //TODO When window resize rerun code, Change Jitter depending on screensize
 
-        let WINDOW_WIDTH = window.innerWidth;
-        let WINDOW_HEIGHT = window.innerHeight;
-        let JITTER = 300; // Increase for faster motion
+        let WINDOW_WIDTH = document.querySelector('.sidenav').offsetWidth;
+        let WINDOW_HEIGHT = document.querySelector('.sidenav').offsetHeight;
+        let JITTER = 100; // Increase for faster motion
         let icons = document.querySelectorAll('.bg-icon');
 
         // Each icon moves at a random interval period
@@ -41,7 +41,7 @@
         // Randomly update the target position for a given icon
         function setNewIconTarget(icon) {
             let rect = icon.getBoundingClientRect();
-            let currentX = rect.left;
+            let currentX = rect.right;
             let currentY = rect.top;
             let newX = randInRange(Math.max(currentX - JITTER, 0), Math.min(currentX + JITTER, WINDOW_WIDTH));
             let newY = randInRange(Math.max(currentY - JITTER, 0), Math.min(currentY + JITTER, WINDOW_HEIGHT));
@@ -50,7 +50,7 @@
 
         // Sets the new target position for an element
         function setElementPosition(element, newX, newY) {
-            element.style.left = newX + "px";
+            element.style.right = newX + "px";
             element.style.top = newY + "px";
         }
 

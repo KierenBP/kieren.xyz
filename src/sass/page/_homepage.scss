@@ -14,14 +14,27 @@
         a {
             color: $primary-color;
             margin-right: 20px;
+            transition: color 0.5s;
             &:last-child {
                 margin-right: 0;
+            }
+            &:hover {
+                color: #FFFFFF;
             }
         }
     }
 }
 .homepage {
     background-color: #FAFAFA;
+}
+.bio {
+    margin: 0 20px;
+    .bio-text {
+        line-height: 1.5;
+        h1 {
+            color: $primary-color;
+        }
+    }
 }
 
 @media (min-width: 960px) {
@@ -33,11 +46,8 @@
         height: 100vh;
         overflow-y: scroll;
         padding: 0 50px 0 50px;
-        .bio-text {
-            h1 {
-                color: $primary-color;
-            }
-        }
+        z-index: 999;
+        margin: 0;
     }
     .sidenav {
         height: 100vh;
