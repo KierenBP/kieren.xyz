@@ -1,0 +1,11 @@
+.bg-icon {
+	position: fixed;
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+	color: rgba(3,155,229,0.23);
+	transform: rotate(-23deg);
+}
+.background {
+	position: fixed;
+	z-index: -1;
+}

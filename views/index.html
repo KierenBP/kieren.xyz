@@ -6,15 +6,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
         <link rel="manifest" href="/manifest.json">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <style>
-            body {
-                margin: 0;
-                font-family: 'Roboto', sans-serif;
-            }
-        </style>
+        <link rel="stylesheet" href="assets/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/style.css">
     </head>
     <body>
         <div id="app"></div>
-        <script src="app.js"></script>
+        <script src="assets/app.js"></script>
+        <script>
+            //TODO When window resize rerun code, Change Jitter depending on screensize
+
+        let WINDOW_WIDTH = window.innerWidth;
+        let WINDOW_HEIGHT = window.innerHeight;
+        let JITTER = 300; // Increase for faster motion
+        let icons = document.querySelectorAll('.bg-icon');
+
+        // Each icon moves at a random interval period
+        icons.forEach(icon => {
+            // Pick a random interval
+            let interval = randInRange(10 * 1000, 20 * 1000);
+            icon.style.transition = (interval / 1000) + "s all";
+            
+            // Set the starting position
+            let startX = randInRange(0, WINDOW_WIDTH);
+            let startY = randInRange(0, WINDOW_HEIGHT);
+            setElementPosition(icon, startX, startY);
+            
+            // Set the starting target position
+            setTimeout(() => { setNewIconTarget(icon) }, 100);
+            
+            // Regularly update the target position
+            setInterval(() => { setNewIconTarget(icon) }, interval);
+        });
+
+        // Randomly update the target position for a given icon
+        function setNewIconTarget(icon) {
+            let rect = icon.getBoundingClientRect();
+            let currentX = rect.left;
+            let currentY = rect.top;
+            let newX = randInRange(Math.max(currentX - JITTER, 0), Math.min(currentX + JITTER, WINDOW_WIDTH));
+            let newY = randInRange(Math.max(currentY - JITTER, 0), Math.min(currentY + JITTER, WINDOW_HEIGHT));
+            setElementPosition(icon, newX, newY);
+        }
+
+        // Sets the new target position for an element
+        function setElementPosition(element, newX, newY) {
+            element.style.left = newX + "px";
+            element.style.top = newY + "px";
+        }
+
+        // Generate a random integer in a range
+        function randInRange(min, max) {
+            return (Math.floor(Math.random() * (max - min)) + min);
+        }
+        </script>
     </body>
 </html>

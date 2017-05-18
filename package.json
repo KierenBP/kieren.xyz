@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node bin/www",
     "build:watch": "node_modules/webpack/bin/webpack.js  --progress --colors -p -d -w",
-    "build": "node_modules/webpack/bin/webpack.js  --progress --colors -p"
+    "build": "node_modules/webpack/bin/webpack.js  --progress --colors -p",
+    "sass": "node_modules/node-sass/bin/node-sass src/sass/app.scss views/assets/style.css --output-style compressed",
+    "sass:watch": "node_modules/node-sass/bin/node-sass src/sass/app.scss views/assets/style.css --output-style compressed -w"
   },
   "repository": "https://github.com/KierenBP/kieren.xyz",
   "author": "Kieren <kieren@kieren.xyz>",
@@ -15,7 +17,8 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "morgan": "^1.8.1",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "node-sass": "^4.5.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

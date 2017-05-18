@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    path: path.resolve('views'),
+    path: path.resolve('views') + '/assets/',
     filename: 'app.js',
   },
   module: {
