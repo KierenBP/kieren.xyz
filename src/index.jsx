@@ -79,7 +79,7 @@ class Homepage extends React.Component {
               desc: 'First paid project. Spent two months designing, developing and improving site with client feedback. Built in JQuery, HTML and SASS. Communication with client done via email and phone. http://maketupies.co.nz'
             }],
             skills: ['Javascript', 'HTML + CSS', 'Web Design', 'SASS', 'React', 'Git', 'SQL', 'Linux'],
-            goals: '',
+            goals: 'In 5 years time I would like to know more programming languages like Golang and Swift, gain certifcation in Amazon Web Services, build strong relationships with people in the web development industry and create/contribute to open source products.',
             education: 'I have passed level 1 and 2 of NECA and am working towards level 3 at Tauhara College. Digital Technology, Electronics, English and Maths are the classes I am taking in 2017. All my classes are picked with technology in mind. I use a combination of books, online tutorial websites (like TeamTreeHouse, Lynda.com and Code School) and practicing to learn programming.'
         };
     }
