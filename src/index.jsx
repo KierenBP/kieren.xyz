@@ -66,9 +66,9 @@ class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            intro: 'Hi! My name is Kieren Butcher-Penrose. I am 17 years old and I was born on the 4th of June 1999 in New Zealand. I am a ‘full stack’ Javascript developer. I use React, React-Router and SASS in the front end and NodeJS, ExpressJS and MySQL in the backend. I am constantly looking to improve my programming and computer knowledge and become a skilled developer with an understanding of backend, frontend and server technology.',
+            intro: 'Hi! My name is Kieren Butcher-Penrose. I am 17 years old and I was born on the 4th of June 1999 in New Zealand. I am a full stack Javascript developer. I am experineced with React, React-Router and SASS in the front end and NodeJS, ExpressJS and MySQL in the backend. I am constantly looking to improve my programming and computer knowledge and become a skilled developer with an understanding of backend, frontend and server technology.',
             background: 'From an early age, I formed an interest in computers. I started helping teachers in my primary school solve their computer issues, set up printers or projectors and became widely known as the ‘Tech Kid’. At the age of nine, I received my first laptop which kickstarted my passion for technology. A year later, I installed Linux which was the foundation for vastly improving my computer knowledge. Throughout the ages of 13 to 15, I started to use Linux in server environments to host gaming servers with custom modifications for friends. Hosting community forums using MyBB with Apache. \n I started coding with HTML and CSS in 2014 before moving on to Javascript. I learned these skills through self learning courses like Lynda.com, Teamtreehouse, Code School, multiple books and practicing. My high school later gave me 4 periods a week where I could continue to learn and further develop my programming skills. In 2015, I started my first paid job for Maketu Pies. Then moving on to more complex development with Wordpress for pilatesfitnessltd.com. At the start of 2016 I took up an unpaid internship at Ashley Cho I.T. Solutions which consists of me developing frontend and backend applications using Javascript/NodeJS, React and MySQL. I also helped change their development process by introducing Git version control to the team.',
-            experiences: [{
+            experience: [{
               title: 'Ashley Cho I.T. Solutions - Web Software Engineer - Feb 2016 – Present',
               desc: 'Unpaid internship, one full work day a week, plus extra work at home. Worked on designing and building websites like http://tauhara.school.nz. Started development for an \'API first\' internal management system using: Node, React and MySQL (https://github.com/kierenbp/acms). Introduced Git source control to the team to help with project collaboration.'
             },{
@@ -96,9 +96,13 @@ class Homepage extends React.Component {
             {this.state.intro}
             <h1>Background</h1>
             {this.state.background}
-            <h1>Experiences</h1>
+            <h1>Skills</h1>
+            {this.state.skills.map((skill) => {
+              return <li>{skill}</li>;
+            })}
+            <h1>Experience</h1>
             <dl>
-            {this.state.experiences.map((exp) => {
+            {this.state.experience.map((exp) => {
               return (
                 <div>
                   <dt style={{fontWeight: 'bold'}}>{exp.title}</dt>
@@ -106,14 +110,10 @@ class Homepage extends React.Component {
                 </div>);
             })}
             </dl>
-            <h1>Skills</h1>
-            {this.state.skills.map((skill) => {
-              return <li>{skill}</li>;
-            })}
-            <h1>Goals</h1>
-            {this.state.goals}
             <h1>Education</h1>
             {this.state.education}
+            <h1>Goals</h1>
+            {this.state.goals}
           </p>
         </div>
       </div>
