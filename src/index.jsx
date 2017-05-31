@@ -80,7 +80,7 @@ class Homepage extends React.Component {
             }],
             skills: ['Javascript', 'HTML + CSS', 'Web Design', 'SASS', 'React', 'Git', 'SQL', 'Linux'],
             goals: 'In 5 years time I would like to know more programming languages like Golang and Swift, gain certifcation in Amazon Web Services, build strong relationships with people in the web development industry and create/contribute to open source products.',
-            education: 'I have passed level 1 and 2 of NECA and am working towards level 3 at Tauhara College. Digital Technology, Electronics, English and Maths are the classes I am taking in 2017. All my classes are picked with technology in mind. I use a combination of books, online tutorial websites (like TeamTreeHouse, Lynda.com and Code School) and practicing to learn programming.'
+            education: 'I have passed level 1 and 2 of NCEA and am working towards level 3 at Tauhara College. Digital Technology, Electronics, English and Maths are the classes I am taking in 2017. All my classes are picked with technology in mind. I use a combination of books, online tutorial websites (like TeamTreeHouse, Lynda.com and Code School) and practicing to learn programming.'
         };
     }
     componentWillMount() {
