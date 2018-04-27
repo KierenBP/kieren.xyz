@@ -1,29 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="nav">
+      <!-- <router-link :to="{name: 'Home'}" exact>Home</router-link> -->
+      <!-- <router-link :to="{name: 'Contact'}" exact>About Me</router-link> -->
+      <!-- <router-link :to="{name: 'Contact'}" exact>Projects</router-link>
+      <router-link :to="{name: 'Contact'}" exact>Resume</router-link> -->
     </div>
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+* {
+  font-family: 'Roboto', 'Helvetica Neue';
 }
-#nav {
-  padding: 30px;
+.nav {
+  margin: 30px auto 0 auto;
+  text-align: center;
   a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
     }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  .router-link-active {
+    text-decoration: underline;
   }
 }
 </style>
