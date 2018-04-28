@@ -38,7 +38,8 @@
         2,
         "tab"
       ],
-      "no-tabs": 0
+      "no-tabs": 0,
+      "max-len": 0
     }
   },
   "postcss": {
