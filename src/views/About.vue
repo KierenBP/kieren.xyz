@@ -34,9 +34,13 @@ export default {
 
 <style lang="scss" scoped>
 .intro-text, .block-text {
-	width: 50%;
 	margin: 0 auto;
 	text-align: center;
+}
+@media (min-width: 700px) {
+	.intro-text, .block-text {
+		width: 50%;
+	}
 }
 .block-text {
 	margin-top: 20px;
