@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "vue": "^2.5.16",
+    "vue-analytics": "^5.10.3",
+    "vue-awesome": "^3.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -30,7 +32,14 @@
     "extends": [
       "plugin:vue/essential",
       "@vue/airbnb"
-    ]
+    ],
+    "rules": {
+      "indent": [
+        2,
+        "tab"
+      ],
+      "no-tabs": 0
+    }
   },
   "postcss": {
     "plugins": {

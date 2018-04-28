@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="nav">
-      <!-- <router-link :to="{name: 'Home'}" exact>Home</router-link> -->
-      <!-- <router-link :to="{name: 'Contact'}" exact>About Me</router-link> -->
-      <!-- <router-link :to="{name: 'Contact'}" exact>Projects</router-link>
-      <router-link :to="{name: 'Contact'}" exact>Resume</router-link> -->
+      <router-link :to="{name: 'Home'}" exact>Home</router-link>
+      <router-link :to="{name: 'About'}" exact>About Me</router-link>
+      <!-- <router-link :to="{name: 'Projects'}" exact>Projects</router-link>
+      <router-link :to="{name: 'Resume'}" exact>Resume</router-link> -->
     </div>
     <router-view/>
   </div>
@@ -16,7 +16,7 @@
   font-family: 'Roboto', 'Helvetica Neue';
 }
 .nav {
-  margin: 30px auto 0 auto;
+  margin: 30px auto 100px auto;
   text-align: center;
   a {
     margin-right: 20px;
